@@ -82,14 +82,14 @@ const columns = [
 ]
 
 async function getUsers() {
-  await fetch('http://localhost:8080/getUsers')
+  await fetch('http://localhost:5000/getUsers')
       .then(res => res.json())
       .then(data => rows.value = data)
 }
 getUsers()
 
 async function addUser(values) {
-  await fetch('http://localhost:8080/addUser', {
+  await fetch('http://localhost:5000/addUser', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
